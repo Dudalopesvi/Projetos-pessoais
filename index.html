@@ -1,69 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pedido de pizza por watts</title>
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900">
+   
 </head>
+
 <body>
     <header class="top">
-<div class="wrap">
-    <div class="brand">
-        <span class="brand_dot" aria-hidden="true"></span>
-        <div>
-            <strong>Pizza por Watts</strong>
-             <!-- adicionado o nome -->
-              <small>pedido por watsApp</small>
+        <div class="wrap">
+            <div class="brand">
+                <span class="brand_dot" aria-hidden="true"></span>
+                <div>
+                    <strong>Pizza por Watts</strong>
+                    <!-- adicionado o nome -->
+                    <small>pedido por watsApp</small>
+                </div>
+                <button type="button" class="btn btn--primary" id="btnSendTop">
+                    Enviar pedido
+                </button>
+                <!-- criado o botao de enviar pedido -->
+            </div>
         </div>
-        <button type="button" class="btn btn--primary" id="btnSendTop">
-            Enviar pedido
-        </button>
-        <!-- criado o botao de enviar pedido -->
-    </div>
-</div>
 
 
     </header>
 
-<main class="wrap">
-    <section class="hero">
-<h1>1 pizza. Um clique. watsApp.</h1>
-<p>Escolha a quantidade e finalize.</p>
+    <main class="wrap">
+        <section class="hero">
+            <h1>1 pizza. Um clique. watsApp.</h1>
+            <p>Escolha a quantidade e finalize.</p>
 
-    </section>
+        </section>
 
-<section class="grid">
-    <!-- cardápio  1 item   -->
-<article class="card">
-    <div class="tag">Mais pedida</div>
-<h2 id="pizzaName">Pizza de Calabresa</h2>
-<p class="desc">Calabresa, cebola e muçarela. (Tmanho M)</p>
+        <section class="grid">
+            <!-- cardápio  1 item   -->
+            <article class="card">
+                <div class="tag">Mais pedida</div>
+                <h2 id="pizzaName">Pizza de Calabresa</h2>
+                <p class="desc">Calabresa, cebola e muçarela. (Tamanho M)</p>
 
-<div class="row">
-    <div class="price">
-        <strong id="pizzaPrice">R$ 39,90</strong>
-  <small>preço Unitário</small>
-  
-    </div>
+                <div class="row">
+                    <div class="price">
+                        <strong id="pizzaPrice">R$ 39,90</strong>
+                        <small>preço Unitário</small>
 
-    <div class="qty" arial-label="Quantidade do Cardápio"   >
-        <button class="icon" id="menuMinus" type="button" arial-label="Diminuir">-</button>
-    <span class="num" id="menuQty">1</span>
-       <button class="icon" id="menuPlus" type="button" arial-label="Aumentar">+</button>
-    </div>
+                    </div>
+
+                    <div class="qty" arial-label="Quantidade do Cardápio">
+                        <button class="icon" id="menuMinus" type="button" arial-label="Diminuir">-</button>
+                        <span class="num" id="menuQty">1</span>
+                        <button class="icon" id="menuPlus" type="button" arial-label="Aumentar">+</button>
+                    </div>
+                </div>
+                <button class="btn btn--primary full" id="addTOCart" type="button">Adicionar ao Carrinho</button>
+            </article>
+
+        </section>
+
+        <!-- Carrinho -->
+        <aside class="card card--soft">
+            <h3>Carrinho</h3>
+            <div class="cartLine">
+                <strong id="CartTitle">Pizza Calabresa</strong>
+                <small>Quantidade no carrinho</small>
+
+            </div>
+
+
+            <div class="qty" arial-label="Quantidade no carrinho">
+                <button class="icon" id="CartMinus" type="button" arial-label="Diminuir">-</button>
+                <span class="num" id="menuQty">1</span>
+                <button class="icon" id="CartPlus" type="button" arial-label="Aumentar">+</button>
+            </div>
+
+<div class="total">
+<span>Total</span>
+<strong id="totalPrice">R$ 0,00</strong>
 </div>
-<button class="btn btn--primary full" id="addTOCart" type="button">Adicionar ao Carrinho</button>
-</article>
 
-</section>
+<div class="actions">
+    <button class="btn" id="clearCart" type="button">Limpar Carrinho</button>
+    <button class="btn btn--primary" id="sendWhats" type="button">Enviar</button>
+</div>
 
-</main>
+<small class="muted">
+    O site só monta a mensagem. A Confirmação é feita por watsApp.   
+</small>
+
+
+        </aside>
+
+    </main>
+
+
+<footer class="foot">
+    <div class="wrap muted">Curso do Livro + HTML + CSS + JS</div>
+</footer>
 
 
 </body>
+
 </html>
